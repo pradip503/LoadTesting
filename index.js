@@ -5,4 +5,12 @@ app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/intense', (req, res) => {
   res.send('Hello Intense!');
 });
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+
+const port = process.env.PORT|| 4500;
+app.listen(port, (error) => {
+    if(error){
+        console.log(error);
+    } else {
+    console.log('Example app listening on port 3000!');
+    }
+});
