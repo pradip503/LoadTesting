@@ -4,9 +4,7 @@ const app = express();
 app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/intense', (req, res) => {
 
-    setTimeout(function(){
-        res.send('Hello Intense!');
-    }, 5000);
+  res.send('Hello Intense!');
   
 });
 
